@@ -7,7 +7,7 @@
     <body>
         <style>
             .main-bg {
-                background: url("/images/main.jpg") center / cover;
+                background: url("images/main.jpg") center / cover;
             }
 
             .main-bg .mdl-layout__header,
@@ -16,7 +16,7 @@
             .mdl-layout__drawer_button {
                 color: white;
                 margin: 0px;
-                position: fixed;
+                position: relative;
             }
 
             .content {
@@ -28,10 +28,15 @@
                 height: 50vh;
                 flex-shrink: 0;
             }
+
+            .main-bg.is-small-screen {
+                display: block;
+                
+            }
         </style>
 
-        <div class="main-bg mdl-layout mdl-js-layout">
-            <header class="mdl-layout__header mdl-color--black mdl-layout__header--waterfall">
+        <div class="main-bg mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header mdl-color--black mdl-layout__header--scroll">
                 <div class="mdl-layout__header-row">
                     <span class="mdl-layout-title">Matthew Ames</span>
                     <div class="mdl-layout-spacer"></div>
